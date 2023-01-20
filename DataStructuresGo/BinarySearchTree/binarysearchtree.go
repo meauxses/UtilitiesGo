@@ -1,14 +1,14 @@
 package BinarySearchTree
 
-type Node struct {
+type TreeNode struct {
 	Data       int
-	leftChild  *Node
-	rightChild *Node
+	leftChild  *TreeNode
+	rightChild *TreeNode
 }
 
 type BinarySearchTree struct {
-	Root  *Node
-	count int
+	Root  *TreeNode
+	Count int
 }
 
 func NewTree() *BinarySearchTree {
@@ -16,7 +16,7 @@ func NewTree() *BinarySearchTree {
 	return &tree
 }
 
-func (root *Node) Search(value int) *Node {
+func (root *TreeNode) Search(value int) *TreeNode {
 	if root == nil {
 		return nil
 	}
@@ -34,7 +34,7 @@ func (root *Node) Search(value int) *Node {
 func (tree *BinarySearchTree) Insert(value int) {
 
 	if tree.Root == nil {
-		tree.Root = &Node{Data: value, leftChild: nil, rightChild: nil}
+		tree.Root = &TreeNode{Data: value, leftChild: nil, rightChild: nil}
 	} else {
 		ptrNode := tree.Root
 		if ptrNode.Data == value {
