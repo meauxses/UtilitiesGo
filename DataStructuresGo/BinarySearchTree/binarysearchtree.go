@@ -8,7 +8,7 @@ type TreeNode struct {
 
 type BinarySearchTree struct {
 	Root  *TreeNode
-	Count int
+	count int
 }
 
 func NewTree() *BinarySearchTree {
@@ -30,7 +30,7 @@ func (root *TreeNode) Search(value int) *TreeNode {
 	}
 	return nil
 }
-
+//** need to complete */
 func (tree *BinarySearchTree) Insert(value int) {
 
 	if tree.Root == nil {
